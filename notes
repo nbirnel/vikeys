@@ -1,0 +1,16 @@
+http://www.howtogeek.com/howto/windows-vista/disable-caps-lock-key-in-windows-vista/
+includes a dumb byte order marker or something
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,00,00,3a,00,00,00,00,00
+padding:
+00,00,00,00,00,00,00,00
+length of data = number of swaps + 1
+02,00,00,00
+scan code to map to (00,00 = "nothing - disable this key"
+00,00
+scan code to map from (3a,00 = caps lock)
+3a,00
+null terminator
+00,00,00,00
