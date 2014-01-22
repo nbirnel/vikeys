@@ -36,7 +36,18 @@ return
 ;Ctrl::Alt
 ;RCtrl::RAlt
 
-; But this works, and I haven't (yet) found any problem with
-; not distinguishing the two.
-Alt::Ctrl
-Ctrl::Alt
+; This works, if we swap via Xfce.
+; I haven't (yet) found any problem with
+; not distinguishing the right from left.
+; But it does not always work swapping through
+; xrdb -merge. I suspect the order programs
+; are started in, between synergy, vikeys,
+; and X
+;Alt::Ctrl
+;Ctrl::Alt
+
+; This doesn't work swapping through xrdb -merge.
+; The swaps are done twice.
+;#IfWinNotActive, ahk_class SynergyDesk
+;Alt::Ctrl
+;Ctrl::Alt
