@@ -1,8 +1,8 @@
-CC="/cygdrive/c/Program Files (x86)/AutoHotkey/Compiler/Ahk2Exe.exe"
+CC="/cygdrive/c/Program Files/AutoHotkey/Compiler/Ahk2Exe.exe"
 PROG=vikeys
 
 ${PROG}.exe : src/${PROG}.ahk
-	${CC} /in ${PROG}.ahk 
+	${CC} /in src/${PROG}.ahk 
 
 test : ${PROG}.exe
 	cygstart $?
