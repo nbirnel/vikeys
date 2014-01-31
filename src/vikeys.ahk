@@ -42,12 +42,12 @@ return
 ; But it does not always work swapping through
 ; xrdb -merge. I suspect the order programs
 ; are started in, between synergy, vikeys,
-; and X
-;Alt::Ctrl
-;Ctrl::Alt
+; and X. vikeys started last, it seems to work
+Alt::Ctrl
+Ctrl::Alt
 
 ; This doesn't work swapping through xrdb -merge.
 ; The swaps are done twice.
-;#IfWinNotActive, ahk_class SynergyDesk
+;#IfWinNotActive, SynergyDesk
 ;Alt::Ctrl
 ;Ctrl::Alt
